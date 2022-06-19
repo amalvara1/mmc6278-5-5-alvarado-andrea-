@@ -1,10 +1,14 @@
 
 var form = document.querySelector('form');
-var input = document.querySelector('input')
-
+var input = document.querySelector('input');
 
 form.onsubmit = function(e) {
     e.preventDefault()
+
+
+    if(input.value.trim() ===""){
+        return false;
+    }
 
     var ul = document.getElementById("todo-list");
     var li = document.createElement("li");
@@ -15,14 +19,16 @@ form.onsubmit = function(e) {
    li.appendChild(btn);
    input.value = ""
 
-}
 
-button.click = function() {
+   btn.onclick = function() {
     if(this.style.has(line-through)) {
-    this.classlist.remove(line-through)
+    this.style.remove(line-through)
     } else {
-        this.classlist.add(line-through)
+        this.style.add(line-through)
     }
 
    }
+
+}
+
   
