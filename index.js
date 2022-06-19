@@ -14,19 +14,18 @@ form.onsubmit = function(e) {
     var li = document.createElement("li");
     var btn = document.createElement("button");
 
-   btn.textContent = input.value
+   btn.textContent = (input.value);
    ul.appendChild(li);
    li.appendChild(btn);
    input.value = ""
 
 
    btn.onclick = function() {
-    if(this.style.has(line-through)) {
-    this.style.remove(line-through)
-    } else {
-        this.style.add(line-through)
-    }
+    this.style = "text-decoration: line-through";
 
+    btn.onclick = function (){
+        this.remove()
+    }
    }
 
 }
